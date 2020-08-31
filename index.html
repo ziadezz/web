@@ -1,0 +1,250 @@
+<html dir="ltr">
+<head>
+<title> This is my first website</title>
+<!-- تستخدمل <base src=""عنما تريد ان تستدعي صورة من موقع استضافة وبعد ذلك اكتب في body <img src=""-->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="author" content="zeiad mahmoud" />
+<meta name="keywords" content="quran ,quran recitation" />
+<meta name="description" content="I am a dentist student. I am keen on lerning programming languages and interested with all is new" />
+<!-- facebook for developers ومن اجل ان يظهر الموقع بشكل سليم عند يأخد احد رابط موقعك وينشره علي فالفيسبوك فمن الضروري استخدام الاكواد التالية بالاسفل والتأكد من خلال -->
+<meta property="og:title" content="this is my first website" />
+<meta property="og:type" content="website" /><!--content="article" -->
+<meta property="og: url" content="index.html" /> <!-- لكن هذه الخطوة ليست ضرورية-->
+<meta property="og:image" content="../1.jpg" />
+<meta property="og:image:width" content="1200" /><!--600-->
+<meta property="og:image:height" content="630" /><!--315-->
+<meta property="og:decription" content="I am a dentist student. I am keen on lerning programming languages and interested with all is new" />
+<!-- twitter for developers ومن اجل ان يظهر الموقع بشكل سليم عند يأخد احد رابط موقعك وينشره علي تويتر فمن الضروري استخدام الاكواد التالية بالاسفل والتأكد من خلال -->
+<meta name="twitter:title" content="Zezo Ezz" />
+<meta name="twitter:description" content="I am a dentist student. I am keen on lerning programming languages and interested with all is new" />
+<meta name="twitter:image" content="../1.jpg" />
+<meta name="twitter:card" content="summary_large_image" /><!-- هذه الخطوة تكتب هكذا فهي شكل ثابت وتستخدم في انها تجعل الصورة التي تظهر كبيرة-->
+<meta name="twitter:site" content="@" /><!-- تستخدم في كتابة اسم مستخدم يتعلق بهذا الموقع بشرط ان يكون لديه حساب علي تويتر :وهي خطوة غير ضرورية-->
+<meta name="twitter:creator" content="@" /><!-- تستخدم في كتابة اسم صانع المحتوي وهي غير ضرورية ايضا-->
+
+<link rel="icon" href="../1.jpg"/>
+<link rel="shortcut" href=""/>
+<link rel="apple-touch-icon" href=""/>
+
+   <style>
+meter::-webkit-meter-bar {background: #fdfdff;} 
+meter::-webkit-meter-optimum-value {background: green;}
+meter::-webkit-meter-suboptimum-value{background:orange;}
+meter::-webkit-meter-even-less-good-value{background:red;}
+meter{
+  height: 400px;
+  width: 200px;
+} 
+.username{
+background: red;
+}
+#body{
+background : green;
+}
+<!--   يحدث التأثي للعنصر الاول ويترك باقي العناصر  js يفضل ان يكون مخصص لعنصر واحد وذلك لان عند العمل عليه بid الا ان css , jsباستخدام اللغتينid فينطبق عليها نفس التأثير وكذالكtags يمكن ان تحمل اكتر من اسم داخل الفاصلتين وعند استدعاء احدها يتم التعرف عليه بشكل طبيعي واذا تشابهت للعديد من  class متشابهان الid ,class -->
+<!--when you want to invoke id in css, use #name   and when you want to invoke class in css, use .name -->
+    </style>
+	<script>
+	<!-- function للاظهار نص رسالة الخطأ عند عدم تعبئة الحقل ولا يصح ابد وضع فاصل او علامات غربية او استخدام حروف غير الانجليزية في ال-->
+	function errormessage(input){
+	if(input.value ==''){
+	input.setCustomValidity('حط اي حاجة يابني انتا');
+	}
+	else if(input.validity.typeMismatch){
+	input.setCustomValidity('مش عشان بقولك حط اي حاجة تحطها بايظة حط حاجة نضيفة صح يعني');
+	
+	}
+	else{
+	input.setCustomValidity('');
+	}
+	return true;
+	}
+	
+	
+	
+	</script>
+	
+
+</head>
+<body  id="body" dir="rtl">
+<!-- هذه الاداة تستخدم عنما تود ان تضغط علي عنوان لموقعك وينقلك للعنوان التالي<a href="#2">Top</a> <h1 id="2">rere</h1>-->
+
+<a href="#2">Top</a>
+
+<a href="parent.html">parent.html</a>
+<form action="child.html" method="get" dir="rtl"> <br />
+<fieldset>
+<legend> <h1>نموذج تعريفي</h1></legend>
+<label class="username"dir="rtl">  اسم المستخدم<span style="color: red;">*</span></label>
+<!--this symbol * tells the user that this field is a mandatory field and then the attribute required is added-->
+<input name="user" required type="text" placeholder="write your name" minlength="3" maxlength="6" oninvalid="errormessage(this)" oninput="errormessage(this)"/> <br />
+<!--minlength & maxlength are used to detect the minimum and maximum of characters required in the field-->
+<label  dir="rtl"> كلمة المرور </label>
+
+<input name="pass" type="password" placeholder="write your name"/> <br />
+<label dir="rtl"> النوع </label>
+<!-- input and button are quite equal, input is selfi colse, button is main tag;-->
+
+<button type="submit">ابعت</button>
+<button type="reset">امسح يابيه</button>
+<input name="النوع"type="radio" value="ذكر" autofocus <!-- value means that is the user select this selection so you you tell the website to send this valu to the server-->ذكر
+<input name="النوع" type="radio" value="أنثي" checked/> أنثي <br />
+<input type="email" required oninvalid="errormessage(this)" oninput="errormessage(this)" /> mail:<br/> 
+<input type="tel" required /> tel:<br/> 
+<input type="date" required value="2002-02-17" min="2002-2-17" max="2020-8-10" /> <br/>
+<!--min & max are used only in <input type="date"/> to detect the start and the end-->
+<input type="week" name="week"/> input week<br/>
+<input type="month" name="month"/>input month<br/>
+<input type="color" name="week"/>input color<br/>
+<input type="hidden" name="week" value="december"/> input week<br/><!-- this type doesnot appear to the user but when he pressed send to the server it will accept the assigned unseen value--> 
+<input type="url" name="week"/> input url<br/>
+<input type="number" name="week" id=""/> input number only<br/>
+<input type="search" name="week" size="50"/> input search<br/>
+<input type="range" name="week" max="200"/> input range<br/>
+<address style="font-size:70px;">zeiad عز العزازيزة</address><br/>
+<dfn style="font-size:70px;">seo</dfn><br/>
+<code style="font-size:70px;" >zezo</code><br/>
+<abbr title="search enngine optimization" style="font-size:70px;">seo</abbr><br/>
+
+
+
+
+
+
+
+<select name="select" required autofocus oninvalid="this.setCustomValidity('حط اي حاجة يابني انتا')">
+<!--there are many options in tag select : autofocus(clearly appears in child.html), checked(used in the radio), disabled, size (clearly appears in child.html), multiple (clearly appears in child.html), name, value, required-->
+<option value="">class</option>
+<!--     فإن الموقع سوف يعتبر ارختيار الظاهر هو الاختيار valueاذا اردنا ان نجعل هذا الحقل ضروري وان اطلب من المستخدم ان يختار من القائمة وان لم يتم تحديد الrequiredمهمة جدا مع valueهنا-->
+<optgroup label="Dentists">
+<option value="ناجح من الفرقة الاولي"> ناجح من الفرقة الاولي</option>
+<option value="باق من الفرقة الاولي"> باق من الفرقة الاولي</option>
+
+
+</optgroup>
+<optgroup label="Lawyers">
+<option> ناجح من الفرقة الاولي</option>
+<option> باق من الفرقة الاولي</option>
+
+
+</optgroup>
+
+
+</select> <br />  <br />  <br />  <br />  <br />
+
+<textarea autofocus cols=""  maxlength="25" name="textarea" required rows="10" col="70" placeholder="give out your feedback"></textarea> <br />
+<!-- cols when used it detect the number of letters and then move on to a new line i.e. it detects the number os columens typical to col-->
+<input type="submit" value="إرسال" />
+<input type="reset" value="clear" />
+
+
+<img src="../screenshots/1.jpg" />
+
+
+<button disabled>زر تجريبي</button>
+
+
+</fieldset>
+
+
+</form>
+<marquee bgcolor="red" behavior="alternate ">
+
+Learn HTML
+
+
+
+</marquee>
+<button type="button" onclick="document.getElementById('File').click()">upload a file</button>
+<input id="File" style="display: none;"type="file" accept="image/*, audio/*, video/*" name="file" required/>
+
+<a href="mailto:ze01091510222@gmail.com" dir="ltr">الميل</a>
+<a href="tel:01091510222" dir="ltr">tel</a>
+
+
+
+<h1 id="2">rere</h1>
+
+<audio src="../screenshots/المقطُع.mp4" controls muted autoplay loop preload="none or metadata or auto"></audio> <br/>
+ 
+<video src="../screenshots/السيسي.mp4" controls width="100%" height="60%" poster="../screenshots/1.jpg"  loop preload="none"> </video> <br/>
+<embed src="../الابحاث editied/156 anatomy.pdf" width="100%" height="60%" /><br />
+<!--<embed src="" /> is a selfi colse used to show up a pdf file or an animated image or functions as <iframe src=""/>-->
+<iframe width="400" height="202.5" src="https://www.youtube-nocookie.com/embed/oOPjWUwNyjA?rel=0 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<details style="background: #f50; padding="5px"">
+<summary>للتفاصيل اضغط هنا</summary>
+<p>fish</p>
+<p>cat</p>
+<p>dog</p>
+</details>
+<!-- button type="has 4 values: button , menu , submit , reset and the last 2 values used in the form"-->
+<button type="button">send<a href="https://eservices.eehc.gov.eg/services/CODEMETER"></a>
+</button>
+
+
+  <iframe src="https://academy.codershiyar.com/" width="50%" height="60%%" allowfullscreen sandbox="allow-forms allow-modals allow-popups allow-same-origin allow-scripts allow-pointer-lock allow-top-navigation"></iframe> 
+  <!--allowfullscreen:to enable the involved web containing a video to have it fullscreen, allow-forms:to enable the involved web containing a form to be used properly,
+allow-modals:to enable the involved web containing a a pop screen to be displayed within th same web, allow-popups:to enable the involved web to display a pop screen out and the adds and links, allow-same-origin:to enable the involved web to detet its path, allow-top-navigation: to enable an extra set of restrictions for the content  -->
+
+
+ <table>
+    <tr>
+      <td> طالب 1 : حميد</td>
+      <td>
+        <meter min="0" max="100" value="90" low="50" high="70" optimum="100" ></meter>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td> طالب 2 : عباس</td>
+      <td> 
+        <meter min="0" max="100" value="60" low="50" high="70" optimum="100" ></meter>
+      </td>
+     </tr>
+
+    <tr>
+      <td> طالب 3 : لارا</td>
+      <td>
+        <meter min="0" max="100" value="40" low="50" high="70" optimum="100" ></meter>
+
+      </td>
+     </tr>
+  </table>
+  <span id="text">forgive me , allah</span> 
+  <button type="button" onclick="save()">حفظ</button>
+  <button type="button" onclick="edit()"> تعديل</button>
+
+<script>
+function save(){
+document.getElementById("text").contentEditable= "false";
+}
+function edit(){
+document.getElementById("text").contentEditable= "true";
+}
+
+</script>
+
+ <button onclick="openDialog()"> عرض مزيد</button>
+<dialog id="box">
+    <h2> Coder Shiyar </h2>
+    <img src="logo.jpg" width="200"/> 
+    <br>
+    <button onclick="closeDialog()"> اغلاق</button>
+</dialog>
+
+<script>
+    function openDialog(){
+        document.getElementById("box").setAttribute("open","true");
+    }
+    function closeDialog(){
+        document.getElementById("box").removeAttribute("open");
+    }
+</script> <br/><br/><br/><br/><br/><br/>
+
+
+
+
+</body>
+</html>
